@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 p-3">
+            <div class="card">
+                <div class="card-header">Home</div>
+                <div class="card-body">
+                    <div class="alert alert-danger" *ngIf="errorMessage">
+                        {{errorMessage |json}}
+                    </div>
+                   <form [formGroup]="formLogin" (ngSubmit)="handelLogin()">
+                        <div class="form-group">
+                            <label for="form-label">Login :</label>
+                            <input type="text" formControlName="username" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-label">Mot de Passe :</label>
+                            <input type="password" formControlName="password" class="form-control">
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-success">Login</button>
+                        </div>
+                   </form> 
+                </div>
+                </div>
+        </div>
+        </div>
+</div>
+    
+
+
+
